@@ -1,0 +1,37 @@
+//Vaja Kasutaja: postgres
+//salasõna: sudo
+//DB loomine, vist lihtsam teha käsitsi ja siis see posts tabel sqliga
+-- Database: hw4
+
+-- DROP DATABASE IF EXISTS hw4;
+
+CREATE DATABASE hw4
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_Europe.1252'
+    LC_CTYPE = 'English_Europe.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+
+
+
+//Tabeli loomine
+-- Table: public.posts
+
+-- DROP TABLE IF EXISTS public.posts;
+
+CREATE TABLE IF NOT EXISTS public.posts
+(
+    id integer NOT NULL,
+    title character varying COLLATE pg_catalog."default",
+    body character varying COLLATE pg_catalog."default",
+    likes integer NOT NULL DEFAULT 0,
+    CONSTRAINT posts_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.posts
+    OWNER to postgres;
