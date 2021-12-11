@@ -26,6 +26,10 @@
       </p>
     </div>
     <a class="delete" data-del="<%= posts.id %>">Delete</a>
+    <button v-on:click="IncreaseLikes" class="like-button">
+      <img class="like-button-img" src="https://www.pngkit.com/png/full/675-6752489_like-big-like-comment-likes-namaskaar-youtube-like.png" alt="like" />
+      <h1> Likes: <%= posts.likes %></h1>
+    </button>
  </div>
  
  <script>
@@ -77,6 +81,17 @@
       width: 90%;
       font-size: 3ch;
    }
-
+   .like-button {
+  float: left;
+  cursor: pointer;
+  border: none;
+  width: 60px;
+  height: 60px;
+  background: none;
+}
+.like-button-img {
+  width: 50px;
+  height: 50px;
+}
 
    </style>
