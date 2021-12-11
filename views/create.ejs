@@ -2,12 +2,13 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=>, initial-scale=1.0">
-<title> Create a post</title>
+<link rel="stylesheet" href="/css/style.css">
+<title>Create a post</title>
 
 <body>
- <h1>Create a post</h1>
+ <h1 class = page_title>Create a post</h1>
 
- <nav>
+ <nav class = "nav">
     <a href="/">Home </a> |
     <a href="/posts">Posts page</a> |
     <a href="/contactus">Contact us</a>|
@@ -16,15 +17,12 @@
    
  <br>
  <div class="create-post">
- <form action="/posts" method="POST">
- <label for="title">Post title:</label>
- <input type="text" id="title" name="title" required><br><br>
- <label for="body">Post body:</label>
- <input type="text" id="body" name="body" required><br><br>
- <label for="urllink"> URL link:</label>
- <input type="text" id="urllink" name="urllink"></textarea><br><br>
- <button>Submit</button>
- </form>
+   <form action="/posts" method="POST">
+      <input type="text" id="title" name="title" placeholder = "Title" required><br><br>
+      <textarea placeholder="Post body" id = "body" name = "body" required></textarea> <br><br>
+      <input type="text" id="urllink" name="urllink" placeholder = "URL link for image"></textarea><br><br>
+      <button>Submit</button>
+   </form>
  </div>
 
  <footer class="footer">
@@ -32,3 +30,62 @@
 </footer>
 </body>
 </html>
+
+<style scoped>
+
+
+.create-post {
+   display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 75%;
+      background-color: orange;
+}
+
+.create-post label {
+   color: black;
+}
+
+#title { 
+   height: 40px;
+   width: 50%;
+   padding: 10px;
+   border: 1px #7f1319;
+   resize: none;
+   margin-left: 25px;
+   font-size: 3ch;
+}
+
+#body {
+	height: 200px;
+   width: 70%;
+   padding: 10px;
+   border: 1px #7f1319;
+   resize: none;
+   margin-left: 25px;
+}
+
+#urllink {
+   height: 20px;
+   padding: 10px;
+   border: 1px #7f1319;
+   resize: none;
+   margin-left: 25px;
+}
+
+.create-post button {
+	height: 50px;
+	width: 100px;
+	margin-top: 5px;
+   margin-left: 50px;
+	color: white;
+	background-color: black;
+}
+
+
+.create-post button:hover {
+	background-color: white;
+	color: black;
+}
+
+</style>

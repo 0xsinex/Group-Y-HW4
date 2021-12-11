@@ -3,12 +3,12 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="/style.css">
+ <link rel="stylesheet" href="/css/style.css">
  <title>Single Post</title>
 </head>
 <body>
- <h1>Single post page</h1>
- <nav>
+ <h1 class = page_title>Single post page</h1>
+ <nav class = "nav">
     <a href="/">Home </a> |
     <a href="/posts">Posts page</a> |
     <a href="/contactus">Contact us</a>|
@@ -19,10 +19,11 @@
     <h2>
     <%= posts.title %>
     </h2>
-    <div class="content">
-    <p>
-    <%= posts.body %>
-    </p>
+    <div>
+      <img src=<%= posts.urllink %> alt="lel">
+      <p>
+      <%= posts.body %>
+      </p>
     </div>
     <a class="delete" data-del="<%= posts.id %>">Delete</a>
  </div>
@@ -42,3 +43,40 @@
 </footer>
 </body>
 </html>
+
+<style scoped>
+   .singlepost {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 75%;
+      background-color: orange;
+   }
+
+   .singlepost h2 {
+      text-align: center;
+      text-align: left;
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      width: 90%;
+      font-size: 3ch;
+      font-size: 5ch;
+   }
+
+   .singlepost div img {
+      display: block;
+      margin :auto;
+      width: 90%;
+   }
+
+   .singlepost div p {
+      text-align: left;
+      margin: auto;
+      margin-top: 30px;
+      width: 90%;
+      font-size: 3ch;
+   }
+
+
+   </style>

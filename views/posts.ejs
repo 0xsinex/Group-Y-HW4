@@ -3,13 +3,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Posts</title>
 </head>
 <body>
-    <h1> JimTalbotPosting </h1>
+    <h1 class = page_title> JimTalbotPosting </h1>
 
-    <nav>
+    <nav class = "nav">
         <a href="/">Home </a> |
         <a href="/posts">Posts page</a> |
         <a href="/contactus">Contact us</a>|
@@ -17,7 +17,7 @@
     </nav>
 
 
-    <div class="posts list">
+    <div class="posts_list">
         <h2>All posts</h2>
         <% if (posts.length > 0) { %>
             <% posts.forEach(post => { %>
@@ -40,3 +40,30 @@
     </footer>
 </body>
 </html>
+
+<style scoped lang="scss">
+    .posts_list {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        background-color: orange;
+        width: 30%;
+        margin: 10px auto;
+        color: #e0e0e0;
+    }
+    .posts_list > h2 {
+        margin: 10px;
+        background-color: black;
+        text-align: center;
+        color: white;
+        box-shadow: 5px  10px 10px #888888;
+    }
+    .title {
+        margin: 20px;
+        color: black;
+    }
+    .body{
+        margin: 20px;
+        color: black;
+    }
+  </style>
