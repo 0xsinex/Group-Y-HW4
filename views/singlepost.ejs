@@ -8,12 +8,7 @@
 </head>
 <body>
  <h1 class = page_title>Single post page</h1>
- <nav class = "nav">
-    <a href="/">Home </a> |
-    <a href="/posts">Posts page</a> |
-    <a href="/contactus">Contact us</a>|
-    <a href="/create">New post</a>
-</nav>
+ <%- include('../partials/navbar') %> 
 
  <div class="singlepost">
     <h2>
@@ -42,9 +37,7 @@
     });
  </script>
 
-<footer class="footer">
-    <p>© WAD 2021 </p>
-</footer>
+<%- include('../partials/footer') %> 
 </body>
 </html>
 
